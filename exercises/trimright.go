@@ -8,5 +8,5 @@ import (
 
 func main() {
 	name := "inanç           "
-	fmt.Println(utf8.RuneCountInString(strings.TrimSpace(name)))
+	fmt.Println(utf8.RuneCountInString(strings.TrimRight(name, " ")))
 }
