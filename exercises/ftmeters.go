@@ -11,9 +11,9 @@ func main() {
 		fmt.Println("Please enter number of feet")
 		return
 	} else {
-		n, err := strconv.Atoi(os.Args[1])
+		n, err := strconv.ParseFloat(os.Args[1], 64)
 		if err != nil {
-			fmt.Println("ERROR:", err)
+			fmt.Printf("ERROR: %s is invalid. Please enter an int or float datatype.\n", os.Args[1])
 			return
 		} else {
 			meters := float64(n) * 0.3048
